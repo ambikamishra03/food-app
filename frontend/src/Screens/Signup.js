@@ -11,7 +11,7 @@ export default function Signup() {
    let navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault(); // synthetic event
-    console.log(JSON.stringify({name:credentials.name,email:credentials.email,password:credentials.password,geolocation:credentials.location}))
+    console.log(JSON.stringify({name:credentials.name,email:credentials.email,password:credentials.password,location:credentials.location}))
     const response = await fetch("https://food-app-j8ho.onrender.com/api/creatuser", {
       method: "POST",
       headers: {
