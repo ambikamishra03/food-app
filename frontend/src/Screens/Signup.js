@@ -6,13 +6,13 @@ export default function Signup() {
     name: "",
     email: "",
     password: "",
-    geolocation: "",
+    location: "",
   });
    let navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault(); // synthetic event
     console.log(JSON.stringify({name:credentials.name,email:credentials.email,password:credentials.password,geolocation:credentials.location}))
-    const response = await fetch("localhost:5000/api/creatuser", {
+    const response = await fetch("https://food-app-vl1o.onrender.com/api/creatuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export default function Signup() {
         name: credentials.name,
         email: credentials.email,
         password: credentials.password,
-        location: credentials.geolocation,
+        location: credentials.location,
       }),
     });
     const json = await response.json();
@@ -94,7 +94,7 @@ export default function Signup() {
               type="text"
               className="form-control"
               name="location"
-              value={credentials.location}
+              value={credentials.location} 
               id="exampleInputPassword1"
               onChange={onchange}
             />

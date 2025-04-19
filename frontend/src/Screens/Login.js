@@ -17,7 +17,7 @@ export default function Login() {
         password: credentials.password,
       })
     );
-    const response = await fetch("localhost:5000/api/loginuser", {
+    const response = await fetch("https://food-app-vl1o.onrender.com/api/loginuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

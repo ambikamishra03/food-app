@@ -19,7 +19,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("localhost:5000/api/orderData", {
+    let response = await fetch("https://food-app-j8ho.onrender.com/api/foodData", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: "POST",

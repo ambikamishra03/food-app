@@ -11,7 +11,8 @@ export default function Home() {
   const [foodCat,setfoodCat] = useState([]);
 
    const localData = async () =>{
-    let response = await fetch("localhost:5000/api/foodData",{
+
+    let response = await fetch("https://food-app-j8ho.onrender.com/api/foodData",{
       method:"POST",
       headers:{ 'Content-type' : 'application/json'}
     });
@@ -19,7 +20,7 @@ export default function Home() {
 
     setfoodItem(response[0]);
     setfoodCat(response[1]);
-    // console.log(response[0],response[1]);
+    console.log(response[0],response[1]);
    }
 useEffect(() => {
   localData()
@@ -60,7 +61,7 @@ useEffect(() => {
           </div>
           <div className="carousel-item active">
             <img
-              src="https://source.unsplash.com/random/300×300?burger"
+              src="https://media.istockphoto.com/id/1498243668/photo/tasty-cheeseburger-with-lettuce-cheddar-cheese-tomato-and-pickles-burger-bun-with-sesame.jpg?s=1024x1024&w=is&k=20&c=HQpNZF02_IhhTDQ_TBpZW6LWmDbk2PvN6M5_R55FwRY="
               className="d-block w-100"
               alt="..."
               style={{ filter: "brightness(30%)" }}
@@ -68,7 +69,7 @@ useEffect(() => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://source.unsplash.com/random/300×300?pastries"
+              src="https://media.istockphoto.com/id/1287894191/photo/vertical-top-view-of-margherita-pizza-with-vegetables-and-herbs.jpg?s=1024x1024&w=is&k=20&c=7DPCFxRLOfOc4e8bB-NJ2ewYe_tw5-S5PUXky4xfq2w="
               className="d-block w-100"
               alt="..."
               style={{ filter: "brightness(30%)" }}
@@ -76,7 +77,7 @@ useEffect(() => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://source.unsplash.com/random/300×300?sandwich"
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               className="d-block w-100"
               alt="..."
               style={{ filter: "brightness(30%)" }}
