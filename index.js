@@ -5,8 +5,16 @@ var cors = require("cors");
 const mongoDB= require("./db");
 const dotenv = require("dotenv");
 dotenv.config(); 
-app.use(cors()); //  Calling use(cors()) will enable the express server to respond to requests(put ,post ,delete,get).
 
+const allowedOrigins = [
+  "https://food-app-navy-nine.vercel.app", // deployed frontend
+  "http://localhost:3000" // for local testing
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 mongoDB();
 app.get("/", (req, res) => {
   res.send("Hello World!");
