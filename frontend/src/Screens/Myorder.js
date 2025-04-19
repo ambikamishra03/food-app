@@ -10,7 +10,7 @@ export default function MyOrder() {
   const fetchMyOrder = async () => {
     const userEmail = localStorage.getItem('userEmail');
     if (!userEmail) {
-      return; // Return early if userEmail is not available
+      return;
     }    
     try {
       const res = await fetch('https://food-app-j8ho.onrender.com/api/auth/myOrderData', {
@@ -86,7 +86,7 @@ export default function MyOrder() {
               </div>
             ))
           ) : (
-            <div>No order data available.</div>
+            <div className='p-2 text-bold m-5'>No order data available.</div>
           )}
         </div>
       </div>

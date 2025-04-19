@@ -12,7 +12,7 @@ import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import { CartProvider } from "./components/ContextReducer";
-import MyOrder from './Screens/Myorder';
+// import MyOrder from './Screens/Myorder';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
 <Route  exact path="/" element={<Home/>} />
 <Route  exact path="/Login" element={<Login/>} />
 <Route  exact path="/Signup" element={<Signup/>} />
-<Route  exact path="/myOrder" element={<MyOrder/>} />
+{/* <Route  exact path="/myOrder" element={<MyOrder/>} /> */}
 
    </Routes>
   </div>

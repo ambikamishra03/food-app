@@ -29,11 +29,11 @@ const handleLogout =()=>{
           <Link className="nav-link active fs-5" aria-current="page" to="/" style={{color:"white"}}>Home</Link>
         </li>
         {/* this will show after login into the page  */}
-        {(localStorage.getItem("authToken"))?
+        {/* {(localStorage.getItem("authToken"))?
         <li className="nav-item">
           <Link className="nav-link active fs-5" aria-current="page" to="/myOrder" style={{color:"white"}}>My Orders</Link>
         </li>
-       :"" }
+       :"" } */}
       </ul>
 
       {(!localStorage.getItem("authToken"))?
