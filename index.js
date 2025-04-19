@@ -1,6 +1,6 @@
 const express = require("express");
-const app = express();
 var cors = require("cors");
+const app = express();
 
 const mongoDB= require("./db");
 const dotenv = require("dotenv");
@@ -15,6 +15,8 @@ app.use(cors({
   origin: allowedOrigins,
   credentials: true,
 }));
+app.use(express.json());
+
 mongoDB();
 app.get("/", (req, res) => {
   res.send("Hello World!");
