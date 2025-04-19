@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 dotenv.config(); 
 
 const allowedOrigins = [
-  "https://food-app-navy-nine.vercel.app", // deployed frontend
+  "https://food-app-nine-swart.vercel.app/", // deployed frontend
   "http://localhost:3000" // for local testing
 ];
 
