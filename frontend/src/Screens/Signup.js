@@ -104,7 +104,7 @@ export default function Signup() {
             Submit
           </button>
           <Link to="/login" className="m-3 btn btn-danger">
-            Already a user
+            Already a user?
           </Link>
         </form>
       </div>
